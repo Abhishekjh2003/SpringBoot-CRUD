@@ -31,8 +31,12 @@ public class EmployeeServ {
 
     
     public String deleteEmployee(Integer id) {
-        repo.deleteById(id);
-        return "Employee deleted successfully";
+        if (repo.existsById(id)) {
+            repo.deleteById(id);
+            return "Employee deleted successfully";
+        } else {
+            return "Employee not found";
+        }
     }
 
 }

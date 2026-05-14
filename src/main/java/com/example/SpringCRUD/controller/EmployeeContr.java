@@ -40,9 +40,9 @@ public class EmployeeContr {
 	{
 		return serv.getEmployeeById(id);
 	}
-    @DeleteMapping("/employee/{id}")
-    public String deleteEmployee(@PathVariable Integer id) {
-        return serv.deleteEmployee(id);
-    }
+	@DeleteMapping("/employee/{id}")
+	public String deleteEmployee(@PathVariable Integer id) {
+	    return serv.deleteEmployee(id);
+	}
 
 }
